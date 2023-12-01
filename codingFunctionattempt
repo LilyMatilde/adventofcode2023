@@ -1,25 +1,24 @@
-function findNumberInstring() {
-    let input = 'a1b2c3d4e5f';
-    let numbers = '0123456789';
-    console.log(input);
-    
-    function check(x){
-      return numbers.includes(x)? true:false;
-    }
-    let matches = [...input].reduce(
-      (x,y) => (check(y) ? x + y: x), '');
-    
-    // this should display if a number is extracted
-    if (matches){
-      console.log(matches);
-      }
-     let result = matches;
-      return result;
-    }
-    
-    let firstIndex = findNumberInstring();
-    let lastIndex = findNumberInstring()
-    console.log (firstIndex.substring(0,1) + lastIndex.slice(-1));
 
-    let totalString = firstIndex.substring(0,1) + lastIndex.slice(-1);
-    
+function findNumberInstring() {
+let input = 'pqr3vwx';
+let numbers = '0123456789';
+console.log(input);
+
+function check(x){
+  return numbers.includes(x)? true:false;
+}
+let matches = [...input].reduce(
+  (x,y) => (check(y) ? x + y: x), '');
+
+// this should display if a number is extracted
+if (matches.length == 1){
+  matches + matches;
+  console.log(matches);
+  } 
+ let result = matches;
+  return result;
+}
+
+let calibrationNumbers = findNumberInstring();
+console.log (calibrationNumbers.substring(0,1) + calibrationNumbers.slice(-1));
+
